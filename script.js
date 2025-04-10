@@ -1,4 +1,3 @@
-// script.js
 const toggleBtn = document.getElementById("toggle-theme");
 const body = document.body;
 
