@@ -1,166 +1,218 @@
 @charset "UTF-8";
 
 :root {
-    --azul: #045071;
-    --rosa: #fd6084;
-    --laranja: #fec49b;
-    --bege: #fcd8af;
-  
-    --bg-light: #fff;
-    --bg-dark: #1a1a1a;
-    --text-light: #111;
-    --text-dark: #f0f0f0;
-  }
-  
-  body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background-color: var(--bg-light);
-    color: var(--text-light);
-    transition: 0.3s;
-  }
-  
-  .dark {
-    background-color: var(--bg-dark);
-    color: var(--text-dark);
-  }
-  
-  header {
-    text-align: center;
-    padding: 2rem;
-    background-color: var(--azul);
-    color: white;
-    position: relative;
-  }
-  
-  .logo {
-    width: 100px;
-    margin-bottom: 0.5rem;
-  }
-  
-  .slogan {
-    font-style: italic;
-    color: var(--bege);
-  }
-  
-  #toggle-theme {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background: transparent;
-    font-size: 1.5rem;
-    border: none;
-    cursor: pointer;
-    color: white;
-  }
-  
-  .intro {
-    text-align: center;
-    padding: 3rem 2rem;
-    background-color: var(--bege);
-  }
-  
-  .intro h2 {
-    color: var(--azul);
-  }
-  
-  .whatsapp-btn {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 0.8rem 1.5rem;
-    background-color: var(--rosa);
-    color: white;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-  }
-  
-  .whatsapp-btn:hover {
-    background-color: var(--laranja);
-  }
-  
-  .carousel {
-    padding: 3rem 2rem;
-    background-color: var(--laranja);
-    text-align: center;
-  }
-  
-  .carousel-container {
-    display: flex;
-    gap: 1rem;
-    overflow-x: auto;
-    padding: 1rem 0;
-    scroll-snap-type: x mandatory;
-  }
-  
-  .card {
-    flex: 0 0 auto;
-    width: 200px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    text-align: center;
-    scroll-snap-align: center;
-    padding: 1rem;
-  }
-  
-  .card img {
-    width: 100%;
-    border-radius: 10px;
-  }
-  
-  .formulario {
-    padding: 3rem 2rem;
-    background-color: var(--bege);
-    text-align: center;
-  }
-  
-  .formulario form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    max-width: 400px;
-    margin: auto;
-  }
-  
-  .formulario input,
-  .formulario button {
-    padding: 0.8rem;
-    font-size: 1rem;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-  }
-  
-  .formulario button {
-    background-color: var(--azul);
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  
-  .formulario button:hover {
-    background-color: var(--rosa);
-  }
-  
-  footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: var(--azul);
-    color: white;
-  }
-  
-  .whatsapp-float {
-    position: fixed;
-    bottom: 1.5rem;
-    right: 1.5rem;
-    background-color: #25d366;
-    color: white;
-    padding: 0.8rem 1.2rem;
-    border-radius: 50%;
-    font-size: 1.5rem;
-    text-decoration: none;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-    z-index: 999;
-  }
+  --azul: #045071;
+  --rosa: #fd6084;
+  --laranja: #fec49b;
+  --bege: #fcd8af;
+
+  --bg-light: #fff;
+  --bg-dark: #1a1a1a;
+  --text-light: #111;
+  --text-dark: #f0f0f0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--azul);
+  color: white;
+  position: relative;
+}
+
+.logo {
+  width: 100px;
+  margin-bottom: 0.5rem;
+}
+
+.slogan {
+  font-style: italic;
+  color: var(--bege);
+}
+
+#toggle-theme {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  font-size: 1.5rem;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+.intro {
+  text-align: center;
+  padding: 3rem 2rem;
+  background-color: var(--bege);
+}
+
+.intro h2 {
+  color: var(--azul);
+}
+
+.whatsapp-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  background-color: var(--rosa);
+  color: white;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.whatsapp-btn:hover {
+  background-color: var(--laranja);
+}
+
+.carousel {
+  padding: 3rem 2rem;
+  background-color: var(--laranja);
+  text-align: center;
+}
+
+.carousel-container {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 1rem 0;
+  scroll-snap-type: x mandatory;
+}
+
+.carousel-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.carousel-container::-webkit-scrollbar-thumb {
+  background: var(--azul);
+  border-radius: 4px;
+}
+
+.card {
+  flex: 0 0 auto;
+  width: 200px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+  scroll-snap-align: center;
+  padding: 1rem;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.formulario {
+  padding: 3rem 2rem;
+  background-color: var(--bege);
+  text-align: center;
+}
+
+.formulario form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+  margin: auto;
+}
+
+.formulario input,
+.formulario button {
+  padding: 0.8rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.formulario button {
+  background-color: var(--azul);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.formulario button:hover {
+  background-color: var(--rosa);
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--azul);
+  color: white;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background-color: #25d366;
+  color: white;
+  padding: 0.8rem 1.2rem;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  z-index: 999;
+}
+
+/* -------------------- TEMA ESCURO -------------------- */
+.dark body {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+.dark .intro,
+.dark .formulario {
+  background-color: #2a2a2a;
+  color: var(--text-dark);
+}
+
+.dark .card {
+  background-color: #333;
+  color: var(--text-dark);
+}
+
+.dark .carousel {
+  background-color: #2c2c2c;
+}
+
+.dark .carousel-container::-webkit-scrollbar-thumb {
+  background: var(--rosa);
+}
+
+.dark .formulario input,
+.dark .formulario button {
+  background-color: #444;
+  border: 1px solid #666;
+  color: var(--text-dark);
+}
+
+.dark .formulario button {
+  background-color: var(--rosa);
+}
+
+.dark .formulario button:hover {
+  background-color: var(--laranja);
+}
+
+.dark .whatsapp-float {
+  background-color: #128c7e;
+}

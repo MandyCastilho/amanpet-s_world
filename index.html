@@ -14,26 +14,47 @@
 </head>
 
 <body>
+  <header>
+    <img src="img/logo.png" alt="Logo AmanPet’s World" class="logo" />
+    <h1>AmanPet’s World</h1>
+    <p class="slogan">Patinhas, carinho e estilo num só lugar.</p>
+    <button id="toggle-theme">🌙</button>
+  </header>
 
-    <header>
-      <img src="img/logo.png" alt="Logo da AmanPet’s World, pet shop especializado em cuidados para animais" class="logo" />
-      <h1>AmanPet’s World</h1>
-      <p class="slogan">Patinhas, carinho e estilo num só lugar.</p>
-      <button id="toggle-theme" aria-label="Alternar tema">🌙</button>
-    </header>
-  
-    <main>
-      <section class="intro">
-        <h2>Bem-vindo ao mundo mais fofo da internet!</h2>
-        <p>Aqui seu pet encontra tudo: amor, estilo e cuidado!</p>
-        <a href="https://wa.me/5511985026264" class="whatsapp-btn" target="_blank">Fale conosco no WhatsApp</a>
-      </section>
-    </main>
-  
-    <footer>
-      <p>&copy; 2025 AmanPet’s World. Todos os direitos reservados.</p>
-    </footer>
-  
-    <script src="script.js"></script>
-  </body>
-  </html>
+  <main>
+    <section class="intro" data-aos="fade-up">
+      <h2>Bem-vindo ao mundo mais fofo da internet!</h2>
+      <p>Aqui seu pet encontra tudo: amor, estilo e cuidado!</p>
+      <a href="https://wa.me/5511985026264" class="whatsapp-btn" target="_blank">Fale conosco no WhatsApp</a>
+    </section>
+
+    <section class="carousel" data-aos="fade-left">
+      <h2>Nossos Destaques</h2>
+      <div class="carousel-container">
+        <div class="card"><img src="pet1.jpg" alt="Pet 1" /><p>Roupa Estilosa</p></div>
+        <div class="card"><img src="pet2.jpg" alt="Pet 2" /><p>Brinquedo Interativo</p></div>
+        <div class="card"><img src="pet3.jpg" alt="Pet 3" /><p>Pet Spa</p></div>
+      </div>
+    </section>
+
+    <section class="formulario" data-aos="fade-right">
+      <h2>Inscreva seu Pet</h2>
+      <form id="petForm">
+        <input type="text" placeholder="Seu nome" required />
+        <input type="text" placeholder="Nome do Pet" required />
+        <input type="email" placeholder="Seu e-mail" required />
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 AmanPet’s World. Todos os direitos reservados.</p>
+  </footer>
+
+  <a href="https://wa.me/5511985026264" class="whatsapp-float" target="_blank">💬</a>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
