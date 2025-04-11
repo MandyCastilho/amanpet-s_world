@@ -187,5 +187,66 @@ footer {
   z-index: 999;
 }
 
+/* Responsividade para tablets e celulares */
+@media (max-width: 768px) {
+  header {
+    padding: 1.5rem 1rem;
+  }
+
+  .logo {
+    width: 90px;
+  }
+
+  .intro,
+  .carousel,
+  .formulario {
+    padding: 2rem 1rem;
+  }
+
+  .carousel-container {
+    padding: 1rem 0.5rem;
+    gap: 0.8rem;
+  }
+
+  .card {
+    width: 160px;
+  }
+
+  .formulario form {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .whatsapp-float {
+    bottom: 1rem;
+    right: 1rem;
+    padding: 0.6rem 1rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 140px;
+  }
+
+  h1 {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .whatsapp-btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .formulario input,
+  .formulario button {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+}
+
+
 
 
