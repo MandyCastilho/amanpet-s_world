@@ -4,9 +4,18 @@ AOS.init({
   once: true,
 });
 
-// Formulário - só exibe alerta básico por enquanto
 document.getElementById("petForm").addEventListener("submit", function(e) {
   e.preventDefault();
-  alert("Inscrição recebida com sucesso! 🐾 Vamos cuidar do seu pet com muito carinho!");
+
+  const msg = document.getElementById("mensagemSucesso");
+  msg.style.display = "block";
+  msg.classList.add("mostrar");
+
+  // Some com a mensagem depois de 4 segundos
+  setTimeout(() => {
+    msg.classList.remove("mostrar");
+    msg.style.display = "none";
+  }, 4000);
+
   this.reset();
 });
