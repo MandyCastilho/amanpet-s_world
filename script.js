@@ -1,30 +1,33 @@
 const toggleBtn = document.getElementById("toggle-theme");
 const body = document.body;
 
-// Carrega tema salvo
+// === Tema salvo no localStorage ===
 const savedTheme = localStorage.getItem("theme");
+
 if (savedTheme === "dark") {
   body.classList.add("dark");
-  toggleBtn.textContent = "☀️";
+  toggleBtn.textContent = "☀️"; // Sol = modo claro
 }
 
-// Alterna tema e salva no localStorage
+// === Alternar tema e salvar no localStorage ===
 toggleBtn.addEventListener("click", () => {
-  body.classList.toggle("dark");
-  const isDark = body.classList.contains("dark");
-  toggleBtn.textContent = isDark ? "☀️" : "🌙";
+  const isDark = body.classList.toggle("dark");
+  toggleBtn.textContent = isDark ? "☀️" : "🌙"; // Alterna ícone
   localStorage.setItem("theme", isDark ? "dark" : "light");
 });
 
-// AOS init
+// === Inicializa animações com AOS.js ===
 AOS.init({
-  duration: 1000,
-  once: true,
+  duration: 1000, // duração da animação (ms)
+  once: true      // anima só uma vez ao entrar na tela
 });
 
-// Formulário - só exibe alerta básico por enquanto
-document.getElementById("petForm").addEventListener("submit", function(e) {
+// === Manipula envio do formulário ===
+document.getElementById("petForm").addEventListener("submit", function (e) {
   e.preventDefault();
+
+  // Aqui você pode futuramente validar dados, enviar via backend, etc.
   alert("Inscrição recebida com sucesso! 🐾 Vamos cuidar do seu pet com muito carinho!");
-  this.reset();
+
+  this.reset(); // limpa o formulário
 });
