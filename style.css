@@ -78,6 +78,7 @@ header {
   overflow-x: auto;
   padding: 1rem 0;
   scroll-snap-type: x mandatory;
+  justify-content: center; /* ⬅ isso aqui centraliza os cards */
 }
 
 .card {
@@ -93,6 +94,8 @@ header {
 
 .card img {
   width: 100%;
+  height: 150px;        /* altura fixa (ajuste como quiser) */
+  object-fit: cover;    /* corta a imagem sem distorcer */
   border-radius: 10px;
 }
 
